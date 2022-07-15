@@ -1,3 +1,6 @@
+img {
+    vertical-align: middle;
+}
 .container {
     width: 640px;
     margin: 0 auto;
@@ -8,7 +11,7 @@
     display: flex;
     gap: 20px;
 }
-.col-left {
+.card-group {
     width: 404px;
 }
 .card-item {
