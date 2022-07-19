@@ -21,32 +21,35 @@ header {
   justify-content: center;
   flex-direction: column;
   height: 958px;
+  color: #fff;
   background: center/cover url('../images/banner.png') no-repeat;
 
   h1 {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
-    color: #fff;
     span {
       &:first-child {
         font-size: 24px;
         line-height: 32px;
       }
-      &:nth-child(2) {
+      &:last-child {
         margin-bottom: 32px;
         font-size: 80px;
         line-height: 106px;
       }
-      &:last-child {
-        font-size: 24px;
-        line-height: 36px;
-      }
     }
+  }
+  p {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 36px;
   }
   ul {
     display: flex;
     gap: 16px;
+    a:hover {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -68,7 +71,13 @@ section {
       margin-top: 40px;
       margin-bottom: 20px;
     }
-    .intro {
+    hr {
+      margin-top: 23px;
+      margin-bottom: 0;
+      border: 0;
+      border-top: 1px solid #000;
+    }
+    ul.intro {
       margin: 0 -15px;
       font-size: 24px;
       .name, .birth {
@@ -82,13 +91,7 @@ section {
         line-height: 36px;
       }
     }
-    hr {
-      margin-top: 23px;
-      margin-bottom: 0;
-      border: 0;
-      border-top: 1px solid #000;
-    }
-    ul {
+    ul.experience {
       font-size: 24px;
       line-height: 32px;
       li {

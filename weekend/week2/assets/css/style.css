@@ -29,6 +29,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 958px;
+  color: #fff;
   background: center/cover url("../images/banner.png") no-repeat;
 }
 
@@ -40,8 +41,6 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 40px;
-  color: #fff;
 }
 
 header h1 span:first-child {
@@ -49,13 +48,14 @@ header h1 span:first-child {
   line-height: 32px;
 }
 
-header h1 span:nth-child(2) {
+header h1 span:last-child {
   margin-bottom: 32px;
   font-size: 80px;
   line-height: 106px;
 }
 
-header h1 span:last-child {
+header p {
+  margin-bottom: 40px;
   font-size: 24px;
   line-height: 36px;
 }
@@ -65,6 +65,10 @@ header ul {
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
+}
+
+header ul a:hover {
+  opacity: 0.8;
 }
 
 h2 {
@@ -88,24 +92,6 @@ section.about img {
   margin-bottom: 20px;
 }
 
-section.about .intro {
-  margin: 0 -15px;
-  font-size: 24px;
-}
-
-section.about .intro .name, section.about .intro .birth {
-  line-height: 32px;
-}
-
-section.about .intro .birth {
-  margin-top: 4px;
-  margin-bottom: 8px;
-}
-
-section.about .intro .edu {
-  line-height: 36px;
-}
-
 section.about hr {
   margin-top: 23px;
   margin-bottom: 0;
@@ -113,12 +99,30 @@ section.about hr {
   border-top: 1px solid #000;
 }
 
-section.about ul {
+section.about ul.intro {
+  margin: 0 -15px;
+  font-size: 24px;
+}
+
+section.about ul.intro .name, section.about ul.intro .birth {
+  line-height: 32px;
+}
+
+section.about ul.intro .birth {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+section.about ul.intro .edu {
+  line-height: 36px;
+}
+
+section.about ul.experience {
   font-size: 24px;
   line-height: 32px;
 }
 
-section.about ul li {
+section.about ul.experience li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,7 +136,7 @@ section.about ul li {
   margin-top: 28px;
 }
 
-section.about ul li::before {
+section.about ul.experience li::before {
   content: '';
   width: 22px;
   height: 22px;
