@@ -49,7 +49,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-style: italic;
   line-height: 1.5;
-  text-align: center;
 }
 
 img {
@@ -86,17 +85,11 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 40px;
-  text-align: left;
-}
-
-header h1 span:nth-child(2) {
   margin-bottom: 32px;
 }
 
-header h1 span:last-child {
-  display: table;
-  margin: 0 auto;
+header p {
+  margin-bottom: 40px;
 }
 
 header ul {
@@ -106,9 +99,14 @@ header ul {
   gap: 16px;
 }
 
+header ul a:hover {
+  opacity: 0.8;
+}
+
 section {
   padding-top: 56px;
   padding-bottom: 56px;
+  text-align: center;
 }
 
 section h3 {
@@ -128,51 +126,10 @@ section.about h2 {
   margin-bottom: 40px;
 }
 
-section.about .intro {
-  margin: 20px -15px 0;
-}
-
-section.about .intro .name {
-  line-height: 1.333333333333333;
-}
-
-section.about .intro .birth {
-  margin-top: 4px;
-  margin-bottom: 8px;
-  line-height: 1.333333333333333;
-}
-
 section.about hr {
   margin: 24px auto 27px;
   border-width: 0;
   border-top: 1px solid #000;
-}
-
-section.about ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 16px;
-  line-height: 1.333333333333333;
-}
-
-section.about ul li + li {
-  margin-top: 28px;
-}
-
-section.about ul li::before {
-  content: '';
-  display: block;
-  width: 22px;
-  height: 22px;
-  background-color: #891818;
-  border-radius: 50%;
 }
 
 section.brand {
@@ -188,7 +145,52 @@ section.brand p {
   margin-bottom: 68px;
 }
 
-section.brand .gallery {
+section.works h2 {
+  margin-bottom: 16px;
+}
+
+.intro {
+  margin: 20px -15px 0;
+}
+
+.intro .name {
+  line-height: 1.333333333333333;
+}
+
+.intro .birth {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  line-height: 1.333333333333333;
+}
+
+.experiment li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+  line-height: 1.333333333333333;
+}
+
+.experiment li + li {
+  margin-top: 28px;
+}
+
+.experiment li::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-color: #891818;
+  border-radius: 50%;
+}
+
+.gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,11 +206,7 @@ section.brand .gallery {
   padding-bottom: 104px;
 }
 
-section.works h2 {
-  margin-bottom: 16px;
-}
-
-section.works .card-group {
+.card-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,7 +217,7 @@ section.works .card-group {
   margin-bottom: 88px;
 }
 
-section.works .card-group h4 {
+.card-group h4 {
   margin-top: 16px;
   line-height: 1.4;
 }
@@ -227,6 +225,7 @@ section.works .card-group h4 {
 footer {
   padding-top: 64px;
   padding-bottom: 64px;
+  text-align: center;
   background-color: #000;
 }
 
