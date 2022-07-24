@@ -1,0 +1,17 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  li {
+    &::after {
+      content: '/';
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    &:last-child {
+      color: $red-200;
+      &::after {
+        content: '';
+      }
+    }
+  }
+}

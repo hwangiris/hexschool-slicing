@@ -1,0 +1,46 @@
+.btn {
+  display: inline-block;
+  font-size: inherit;
+  line-height: inherit;
+  &.btn-sm {
+    padding: 6px 12px;
+  }
+  &.btn-lg {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 136px;
+    padding-right: 136px;
+    @media screen and (min-width: 1024px) {
+      padding-left: 176px;
+      padding-right: 176px;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  &.btn-red {
+    color: $white;
+    background-color: $red-200;
+    border: 0;
+    &:hover {
+      background-color: $red-300;
+    }
+  }
+  &.btn-black {
+    color: $white;
+    background-color:lighten($black, 10%);
+    border: 0;
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
+
+.btn-text {
+  &.btn-red {
+    color: $red-200;
+    &:hover {
+      color: $red-300;
+    }
+  }
+}

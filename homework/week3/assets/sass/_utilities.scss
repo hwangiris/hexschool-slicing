@@ -1,0 +1,206 @@
+$grid-breakpoints: (
+  "": false,
+  xs: 360px,
+  sm: 414px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px,
+);
+
+$spacies: (
+  "0": 0px,
+  "1": 4px,
+  "2": 8px,
+  "3": 16px,
+  "4": 24px,
+  "5": 32px,
+  "6": 48px,
+  "7": 64px,
+  "auto": auto,
+);
+$property: "m", "p";
+$sides: "", "t", "b", "l", "r", "x", "y";
+$fzs: (
+  "1": 64px,
+  "2": 48px,
+  "3": 36px,
+  "4": 24px,
+  "5": 20px,
+  "6": 14px,
+);
+
+body {
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+  line-height: 1.5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    max-width: 720px; // 696+24
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 990px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1320px; // 1296+24
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a, button {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s, opacity 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6, strong, .strong, b {
+  font-weight: bold;
+}
+
+
+@mixin generate($pro, $side, $spacValue) {
+  @if $side == "" {
+    @if $pro == "m" {
+      margin: $spacValue;
+    }
+    @if $pro == "p" {
+      padding: $spacValue;
+    }
+  }
+  @if $side == "t" {
+    @if $pro == "m" {
+      margin-top: $spacValue;
+    }
+    @if $pro == "p" {
+      padding-top: $spacValue;
+    }
+  }
+  @if $side == "b" {
+    @if $pro == "m" {
+      margin-bottom: $spacValue;
+    }
+    @if $pro == "p" {
+      padding-bottom: $spacValue;
+    }
+  }
+  @if $side == "l" {
+    @if $pro == "m" {
+      margin-left: $spacValue;
+    }
+    @if $pro == "p" {
+      padding-left: $spacValue;
+    }
+  }
+  @if $side == "r" {
+    @if $pro == "m" {
+      margin-right: $spacValue;
+    }
+    @if $pro == "p" {
+      padding-right: $spacValue;
+    }
+  }
+  @if $side == "x" {
+    @if $pro == "m" {
+      margin-left: $spacValue;
+      margin-right: $spacValue;
+    }
+    @if $pro == "p" {
+      padding-left: $spacValue;
+      padding-right: $spacValue;
+    }
+  }
+  @if $side == "y" {
+    @if $pro == "m" {
+      margin-top: $spacValue;
+      margin-bottom: $spacValue;
+    }
+    @if $pro == "p" {
+      padding-top: $spacValue;
+      padding-bottom: $spacValue;
+    }
+  }
+}
+
+@each $key, $value in $grid-breakpoints {
+  @if not $value {
+    @each $pro in $property {
+      @each $side in $sides {
+        @each $spacKey, $spacValue in $spacies {
+          .#{$pro}#{$side}-#{$spacKey} {
+            @include generate($pro, $side, $spacValue);
+          }
+        }
+      }
+    }
+    @each $fzKey, $fzValue in $fzs {
+      h#{$fzKey}, .h#{$fzKey} {
+        font-size: $fzValue;
+      }
+    }
+  } @else {
+    @media screen and (min-width: $value) {
+      @each $pro in $property {
+        @each $side in $sides {
+          @each $spacKey, $spacValue in $spacies {
+            .#{$pro}#{$side}-#{$key}-#{$spacKey} {
+              @include generate($pro, $side, $spacValue);
+            }
+          }
+        }
+      }
+      @each $fzKey, $fzValue in $fzs {
+        h#{$fzKey}-#{$key}, .h#{$fzKey}-#{$key} {
+          font-size: $fzValue;
+        }
+      }
+    }
+  }
+}
+
+.text-red-100 {
+  color: $red-100;
+}
+
+.text-red-200 {
+  color: $red-200;
+}
+
+.text-red-300 {
+  color: $red-300;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-gray {
+  color: $gray;
+}
+
+.text-black {
+  color: $black;
+}
+
+.material-icons-outlined {
+  font-size: inherit;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
