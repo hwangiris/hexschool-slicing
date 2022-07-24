@@ -156,18 +156,18 @@
   > .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
   article {
     width: 100%;
     @media screen and (min-width: 768px) {
-      width: calc(100% - 180px); // -156-24
+      width: 77.5%;
+      padding-right: 24px;
     }
     @media screen and (min-width: 1024px) {
-      width: calc(100% - 250px); // -226-24
+      width: 77%;
     }
     @media screen and (min-width: 1440px) {
-      width: calc(100% - 440px); // -416-24
+      width: 68%;
     }
   }
   aside {
@@ -175,13 +175,13 @@
       display: none;
     }
     @media screen and (min-width: 768px) {
-      width: 156px;
+      width: 22.5%;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 23%;
     }
     @media screen and (min-width: 1440px) {
-      width: 226px;
-    }
-    @media screen and (min-width: 1440px) {
-      width: 416px;
+      width: 32%;
       padding-right: 100px;
     }
     h4 {

@@ -3794,11 +3794,16 @@ form textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 24px;
+}
+
+@media screen and (max-width: 1023px) {
+  .store-info {
+    gap: 24px;
+  }
 }
 
 .store-info iframe {
-  width: 746px;
+  width: 100%;
   border: 0;
 }
 
@@ -3811,6 +3816,12 @@ form textarea {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .store-info iframe {
     height: 414px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .store-info iframe {
+    width: 57%;
   }
 }
 
@@ -3868,7 +3879,8 @@ form textarea {
 
 @media screen and (min-width: 1024px) {
   .store-cards.store-cards-highlight {
-    width: 526px;
+    width: 43%;
+    padding-right: 24px;
   }
 }
 
@@ -4184,9 +4196,6 @@ form textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .blog-page article {
@@ -4195,19 +4204,20 @@ form textarea {
 
 @media screen and (min-width: 768px) {
   .blog-page article {
-    width: calc(100% - 180px);
+    width: 77.5%;
+    padding-right: 24px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .blog-page article {
-    width: calc(100% - 250px);
+    width: 77%;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .blog-page article {
-    width: calc(100% - 440px);
+    width: 68%;
   }
 }
 
@@ -4219,19 +4229,19 @@ form textarea {
 
 @media screen and (min-width: 768px) {
   .blog-page aside {
-    width: 156px;
+    width: 22.5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .blog-page aside {
+    width: 23%;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .blog-page aside {
-    width: 226px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .blog-page aside {
-    width: 416px;
+    width: 32%;
     padding-right: 100px;
   }
 }
